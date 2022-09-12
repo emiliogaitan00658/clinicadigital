@@ -6,7 +6,7 @@ include_once "./vendor/autoload.php";
 use Dompdf\Dompdf;
 $dompdf = new Dompdf();
 ob_start();
-include "imprimir_altamira.php";
+include "imprimir_factura.php";
 $html = ob_get_clean();
 $dompdf->loadHtml($html);
 $dompdf->render();

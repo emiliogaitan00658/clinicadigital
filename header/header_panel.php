@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>ORTHODENTAL S.A CONTABILIDAD</title>
+    <title>SISTEMA DIGITAL DENTAL</title>
     <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
@@ -49,7 +49,7 @@ $datos_empresa=datos_clientes::mostrar_detalle_empresa($mysqli);
     <div style="padding: 1em " class="container">
         <ul class="nav nav-tabs">
             <li class="nav-item text-uppercase">
-                <a class="nav-link text-uppercase" href="#">Sucursal <b class="text-uppercase">
+                <a class="nav-link text-uppercase" href="#">Clinica <b class="text-uppercase">
                         <?php if (!empty($_SESSION)) {
                             echo datos_clientes::nombre_sucursal($idsucursal);
                         } ?></b></a>
@@ -99,13 +99,4 @@ $datos_empresa=datos_clientes::mostrar_detalle_empresa($mysqli);
     </div>
 </div>
 <br>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-NVK62C6JJC"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-NVK62C6JJC');
-</script>
 

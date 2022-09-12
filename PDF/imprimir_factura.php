@@ -43,11 +43,11 @@ $cliente = datos_clientes::datos_clientes_generales($booos["indcliente"], $mysql
 datos_clientes::update_Control_factura($talonario, $key, $mysqli);
 ?>
 <div style="margin-top: 4.5em!important;margin-left: 1em">
-    <p style="margin-left: 6em;width: 65%!important; font-size: 13px;" class="linea"><b><?php echo $cliente['nombre'] . " " . $cliente['apellido']; ?></b></p>
-    <span style="position: static!important; width: 20%!important; font-size: 16px;margin-left: 1em;" class="linea"><b><?php echo datos_clientes::fecha_get_pc(); ?></b></span>
+    <p style="margin-left: 1em;width: 65%!important; font-size: 13px;" class="linea"><b><?php echo $cliente['nombre'] . " " . $cliente['apellido']; ?></b></p>
+    <span style="position: static!important; width: 20%!important; font-size: 16px;margin-left: 5em;" class="linea"><b><?php echo datos_clientes::fecha_get_pc(); ?></b></span>
 </div>
 <br>
-<table style="height: 150px; width: 600px;" id="contenidoTabla">
+<table style="height: 150px; width: 600px;" id="contenidoTabla" >
     <tbody>
     <?php
     $subtotal = datos_clientes::sumatotal_subtotal($key, $mysqli);
@@ -62,17 +62,17 @@ datos_clientes::update_Control_factura($talonario, $key, $mysqli);
         <tr style="height: 5px;">
             <td style="width: 10px; height: 20px;margin-left: 0;padding-left: 0;"
                 class="left-align"><b><?php echo $resultado['codigo_producto']; ?></b></td>
-            <td style="width: 40px; height: 20px;margin-left: 6px"
+            <td style="width: 40px; height: 20px;margin-left: 6px;"
                 class="right-align"><b><?php echo $resultado['unidad']; ?></b></td>
-            <td style="width: 400px; height: 20px;margin-left: 6px"><b><?php echo datos_clientes::nombre_producto_completo($resultado['codigo_producto'], $mysqli); ?></b></td>
-            <td style="width: 68px; height: 20px;padding-left: 2em"
+            <td style="width: 400px; height: 20px;margin-left: 4px;"><b><?php echo datos_clientes::nombre_producto_completo($resultado['codigo_producto'], $mysqli); ?></b></td>
+            <td style="width: 68px; height: 20px;padding-left: 0em;"
                 class="right-align"><b><?php echo number_format(($resultado['precio_unidad']), 2, '.', ','); ?></b></td>
-            <td style="width: 68px; height: 20px;padding-left: 1em"
+            <td style="width: 68px; height: 20px;padding-left: 1em;"
                 class="right-align"><b><?php echo number_format(($resultado['precio_total']), 2, '.', ','); ?></b></td>
         </tr>
         <?php
     }
-    $res = 10 - $bandera;
+    $res = 9 - $bandera;
     if ($bandera == "0") {
     } else {
         for ($i = 1; $i <= $res; $i++) {
@@ -91,9 +91,9 @@ datos_clientes::update_Control_factura($talonario, $key, $mysqli);
         <td style="width: 40px; height:20px;">&nbsp;</td>
         <td style="width: 400px; height:20px;">&nbsp;</td>
         <td style="width: 68px; height:20px;">&nbsp;</td>
-        <td style="width: 68px; height:20px;font-size: 15px!important;"><b><?php echo number_format(($subtotal), 2, '.', ','); ?></b></td>
+        <td style="width: 68px; height:10px;font-size: 15px!important;"><b><?php echo number_format(($subtotal), 2, '.', ','); ?></b></td>
     </tr>
-    <tr style="height: 5px;">
+    <tr style="height: 5px;" >
         <td style="width: 100px; height:20px;">&nbsp;</td>
         <td style="width: 40px; height:20px;">&nbsp;</td>
         <td style="width: 400px; height:20px;">&nbsp;</td>
@@ -103,3 +103,4 @@ datos_clientes::update_Control_factura($talonario, $key, $mysqli);
     </tbody>
 </table>
 </body>
+
