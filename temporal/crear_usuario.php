@@ -73,51 +73,11 @@ if ($_POST) {
                         <div class="control-pares col-md-3">
                             <label>Seleccionar Sucursal: *</label>
                             <select name="textsucursal" class="form-control" required>
-                                <option class="form-control" value="<?php
-                                echo $_SESSION['sucursal']; ?>" selected><?php
-
-                                    if ($_SESSION['sucursal'] == "1") {
-                                        echo "Managua";
-                                    }
-                                    if ($_SESSION['sucursal'] == "2") {
-                                        echo "Masaya";
-                                    }
-                                    if ($_SESSION['sucursal'] == "3") {
-                                        echo "Chontales";
-                                    }
-                                    if ($_SESSION['sucursal'] == "6") {
-                                        echo "Esteli";
-                                    }
-                                    if ($_SESSION['sucursal'] == "5") {
-                                        echo "Leon";
-                                    }
-                                    if ($_SESSION['sucursal'] == "9") {
-                                        echo "Matagalpa";
-                                    }
-                                    if ($_SESSION['sucursal'] == "4") {
-                                        echo "Chinandega";
-                                    }
-                                    if ($_SESSION['sucursal'] == "7") {
-                                        echo "Managua Bolonia";
-                                    }
-                                    if ($_SESSION['sucursal'] == "8") {
-                                        echo "Managua Villa Fontana";
-                                    }
-                                    if ($_SESSION['sucursal'] == "10") {
-                                        echo "Clinica Dansing";
-                                    }
-
-                                    ?></option>
-                                <option class="form-control" value="1">Managua</option>
-                                <option class="form-control" value="2">Masaya</option>
-                                <option class="form-control" value="3">Chontales</option>
-                                <option class="form-control" value="6">Esteli</option>
-                                <option class="form-control" value="5">Leon</option>
-                                <option class="form-control" value="9">Matagalpa</option>
-                                <option class="form-control" value="4">Chinandega</option>
-                                <option class="form-control" value="7">Managua Bolonia</option>
-                                <option class="form-control" value="8">Managua Villa Fontana</option>
-                                <option class="form-control" value="10">Clinica Dansing</option>
+                                <?php
+                                $result33 = $mysqli->query("SELECT * FROM `sucursal`");
+                                while ($resultado2 = $result33->fetch_assoc()) { ?>
+                                    <option class="form-control" value="<?php echo $resultado2["indsucursal"]; ?>"><?php echo $resultado2["nombre_sucursal"]; ?></option>
+                                <?php } ?>
                             </select>
                         </div>
                 </div>
@@ -166,7 +126,7 @@ if ($_POST) {
                 <td style="width: 275px;"><?php echo $resultado['apellido_empleado']; ?></td>
                 <td style="width: 188px;"><?php echo $resultado['user']; ?></td>
                 <td style="width: 190.038px;"><?php echo $resultado['pass']; ?></td>
-                <td style="width: 205.962px;"><?php echo datos_clientes::nombre_sucursal($resultado['indsucursal']); ?></td>
+                <td style="width: 205.962px;"><?php echo datos_clientes::nombre_sucursal($resultado['indsucursal'], $mysqli); ?></td>
                 <td style="width: 190.038px;"><a href="#" onclick="
                             var i='<?php echo $resultado['indempleado']; ?>';
                             verficar_eliminar(i);" class="btn btn-danger"><i class="icon-bin white-text"></i></a></td>

@@ -56,26 +56,6 @@ if ($_POST) {
 
 }
 ?>
-<!--<div class="container z-depth-1">-->
-<!--    <br>-->
-<!--    <section class="container white rounded z-depth-1" style="padding: 2em">-->
-<!--        <form action="--><?php //echo htmlspecialchars($_SERVER["PHP_SELF"]); ?><!--" method="post">-->
-<!--            <section class="row">-->
-<!--                <div class="control-pares col-md-5">-->
-<!--                    <label for="" class="control-label">Usuario:</label>-->
-<!--                    <input type="text" name="textuser" class="form-control" placeholder="Usuario" required>-->
-<!--                </div>-->
-<!--                <div class="control-pares col-md-5">-->
-<!--                    <label for="" class="control-label">Contraseña:</label>-->
-<!--                    <input type="password" name="textpass" class="form-control" placeholder="Contraseña" required>-->
-<!--                </div>-->
-<!--            </section>-->
-<!--            <div class="modal-footer">-->
-<!--                <input type="submit" value="Ingresar" class="btn white-text blue-grey btn-primary"/>-->
-<!--            </div>-->
-<!--        </form>-->
-<!--    </section>-->
-<!--</div>-->
 
     <style>
         .main-content{
@@ -158,7 +138,7 @@ if ($_POST) {
 
 
     <!-- Main Content -->
-    <div class="container-fluid" style="margin-top: 5em;">
+    <div class="container-fluid" style="margin-top: 6em;">
         <div class="row main-content bg-success text-center">
             <div class="col-md-4 text-center company__info center-block">
                 <!--<h4 class="company_title center-align"><img src="093b747.png"  class="responsive-img" width="60%" alt=""></h4>-->
@@ -167,7 +147,7 @@ if ($_POST) {
                 <div class="container-fluid">
                     <div>
                         <br>
-                        <h3>SISTEMA DE FACTURACIÓN</h3>
+                        <h3>SISTEMA DENTAL DIGITAL</h3>
                         <hr>
                     </div>
                     <div class="center-block">

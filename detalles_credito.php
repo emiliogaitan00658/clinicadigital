@@ -53,7 +53,7 @@ if ($_POST) {
                 </div>
                 <div class="control-pares col-md-4">
                     <label for="" class="control-label">Sucursal: *</label>
-                    <input type="text" name="textpagar" class="form-control" value="<?php echo datos_clientes::nombre_sucursal($indsucursal); ?>" readonly=readonly>
+                    <input type="text" name="textpagar" class="form-control" value="<?php echo datos_clientes::nombre_sucursal($indsucursal, $mysqli); ?>" readonly=readonly>
                 </div>
             </section>
             <br>

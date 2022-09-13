@@ -51,8 +51,11 @@ if (!empty($_SESSION)) {
             <li class="nav-item text-uppercase">
                 <a class="nav-link text-uppercase" href="#">Clinica <b class="text-uppercase">
                         <?php if (!empty($_SESSION)) {
-                            echo datos_clientes::nombre_sucursal($idsucursal);
+                            echo datos_clientes::nombre_sucursal($idsucursal, $mysqli);
                         } ?></b></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="factura_dia">Agenda</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="factura_dia">Facturación</a>
@@ -68,7 +71,9 @@ if (!empty($_SESSION)) {
 <!--            </li>-->
             <li class="nav-item">
                 <a class="nav-link alert alert-primary" href="#"><b> <i
-                            class="icon-coin-dollar "> </i> <?php echo $dolar ?> Cordobas</b></a>
+                            class="icon-coin-dollar "> </i> <?php try { echo $dolar; } catch (Exception $e) {
+
+                        }?> Cordobas</b></a>
             </li>
 <!--            <li class="nav-item">-->
 <!--                <a class="nav-link bg-red" href="talonario_cambio"> --><?php //if (!empty($_SESSION)) {

@@ -78,7 +78,7 @@ if ($_GET) {
                             ?></td>
                         <td><b><?php echo $rows['nombre'] . " " . $rows['apellido']; ?></b></td>
                         <td><b><?php echo $rows['telefono']; ?></b></td>
-                        <td><b><?php echo datos_clientes::nombre_sucursal($resultado['indsucursal']); ?></b></td>
+                        <td><b><?php echo datos_clientes::nombre_sucursal($resultado['indsucursal'], $mysqli); ?></b></td>
                         <td class="center-align"><?php
                             if ($resultado['status'] == "false") {
                                 ?>

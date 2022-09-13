@@ -15,7 +15,7 @@ if ($_POST) {
 ?>
 <div class="container">
     <hr>
-    <h2 class="center">INFORME DE MATERILES DE SUCURSAL DE <?php echo strtoupper(datos_clientes::nombre_sucursal($sucursal)); ?></h2>
+    <h2 class="center">INFORME DE MATERILES DE SUCURSAL DE <?php echo strtoupper(datos_clientes::nombre_sucursal($sucursal, $mysqli)); ?></h2>
     <h5 class="center-align">Fecha de facturaciòn <?php echo $fecha1 ?> al <?php echo $fecha2 ?></h5>
     <hr>
 </div>

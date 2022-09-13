@@ -109,7 +109,7 @@ if ($_POST) {
                 <td style="width: 400px;"><?php echo $resultado['direccion']; ?></td>
                 <td style="width: 188px;"><?php echo $resultado['telefono']; ?></td>
                 <td style="width: 190.038px;"><?php echo $resultado['celular']; ?></td>
-                <td style="width: 205.962px;"><?php echo datos_clientes::nombre_sucursal($resultado['indsucursal']); ?></td>
+                <td style="width: 205.962px;"><?php echo datos_clientes::nombre_sucursal($resultado['indsucursal'], $mysqli); ?></td>
                 <td style="width: 190.038px;"><a href="#" onclick="
                         var i='<?php echo $resultado['indsucursal']; ?>';
                         verficar_eliminar(i);" class="btn btn-danger"><i class="icon-bin white-text"></i></a></td>

@@ -17,12 +17,12 @@ if (!empty($_POST["textnombre"])) {
 ?>
 <div class="container white rounded z-depth-1" style="border-radius: 6px;">
     <div style="padding: 1em">
-        <h5 class="alert alert-primary">Buscardor de Clientes<a class="btn btn-dark blue-grey right" href="index.php" class="right btn btn-info"><i class="icon-user-plus white-text"></i> Nuevo Cliente</a></h5>
+        <h5 class="alert alert-primary">Buscardor de Paciente<a class="btn btn-dark blue-grey right" href="index.php" class="right btn btn-info"><i class="icon-user-plus white-text"></i> Nuevo Cliente</a></h5>
         <hr>
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
             <section class="row">
                 <div class="control-pares col-md-4">
-                    <input type="text" name="textnombre" class="form-control mr-sm-2 input_modificado" type="search" placeholder="Buscar cliente o Empresa ....."  aria-label="Search" required>
+                    <input type="text" name="textnombre" class="form-control mr-sm-2 input_modificado" type="search" placeholder="Buscar Paciente....."  aria-label="Search" required>
                 </div>
                 <div class="control-pares col-md-4">
                     <input type="submit" value="Buscar" class="btn  white-text blue-grey btn-primary"/>

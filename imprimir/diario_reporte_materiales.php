@@ -18,7 +18,7 @@ if (!$_SESSION) {
 <div class="center-align">
     <h4>Reporte de materiales Sucursal <span>
             <?php if (!empty($_SESSION)) {
-                echo datos_clientes::nombre_sucursal($idsucursal);
+                echo datos_clientes::nombre_sucursal($idsucursal, $mysqli);
             } ?>
         </span></h4>
     <p>Fecha reporte : <b><?php echo datos_clientes::fecha_get_pc(); ?></b></p>

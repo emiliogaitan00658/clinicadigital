@@ -51,7 +51,7 @@ $datos_empresa=datos_clientes::mostrar_detalle_empresa($mysqli);
             <li class="nav-item text-uppercase">
                 <a class="nav-link text-uppercase" href="#">Clinica <b class="text-uppercase">
                         <?php if (!empty($_SESSION)) {
-                            echo datos_clientes::nombre_sucursal($idsucursal);
+                            echo datos_clientes::nombre_sucursal($idsucursal, $mysqli);
                         } ?></b></a>
             </li>
             <li class="nav-item">

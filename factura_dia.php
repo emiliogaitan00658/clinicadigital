@@ -95,89 +95,11 @@ if ($idsucursal != 1) {
                     </div>
                     <div class="control-pares col-md-3">
                         <select name="textsucursal" class="form-control" required>
-                            <?php if (!$_POST) { ?>
-                                <option class="form-control" value="<?php
-                                echo $_SESSION['sucursal']; ?>" selected><?php
-
-                                    if ($_SESSION['sucursal'] == "1") {
-                                        echo "Managua";
-                                    }
-                                    if ($_SESSION['sucursal'] == "2") {
-                                        echo "Masaya";
-                                    }
-                                    if ($_SESSION['sucursal'] == "3") {
-                                        echo "Chontales";
-                                    }
-                                    if ($_SESSION['sucursal'] == "6") {
-                                        echo "Esteli";
-                                    }
-                                    if ($_SESSION['sucursal'] == "5") {
-                                        echo "Leon";
-                                    }
-                                    if ($_SESSION['sucursal'] == "9") {
-                                        echo "Matagalpa";
-                                    }
-                                    if ($_SESSION['sucursal'] == "4") {
-                                        echo "Chinandega";
-                                    }
-                                    if ($_SESSION['sucursal'] == "7") {
-                                        echo "Managua Bolonia";
-                                    }
-                                    if ($_SESSION['sucursal'] == "8") {
-                                        echo "Managua Villa Fontana";
-                                    }
-                                    if ($_SESSION['sucursal'] == "10") {
-                                        echo "Clinica Dansing";
-                                    }
-                                    ?>
-                                </option>
-                            <?php } else { ?>
-                                <option class="form-control" value="<?php
-                                echo $_POST['textsucursal']; ?>" selected><?php
-
-                                    if ($_POST['textsucursal'] == "1") {
-                                        echo "Managua";
-                                    }
-                                    if ($_POST['textsucursal'] == "2") {
-                                        echo "Masaya";
-                                    }
-                                    if ($_POST['textsucursal'] == "3") {
-                                        echo "Chontales";
-                                    }
-                                    if ($_POST['textsucursal'] == "6") {
-                                        echo "Esteli";
-                                    }
-                                    if ($_POST['textsucursal'] == "5") {
-                                        echo "Leon";
-                                    }
-                                    if ($_POST['textsucursal'] == "9") {
-                                        echo "Matagalpa";
-                                    }
-                                    if ($_POST['textsucursal'] == "4") {
-                                        echo "Chinandega";
-                                    }
-                                    if ($_POST['textsucursal'] == "7") {
-                                        echo "Managua Bolonia";
-                                    }
-                                    if ($_POST['textsucursal'] == "8") {
-                                        echo "Managua Villa Fontana";
-                                    }
-                                    if ($_POST['textsucursal'] == "10") {
-                                        echo "Clinica Dansing";
-                                    }
-                                    ?>
-                                </option>
+                            <?php
+                            $result33 = $mysqli->query("SELECT * FROM `sucursal`");
+                            while ($resultado2 = $result33->fetch_assoc()) { ?>
+                            <option class="form-control" value="<?php echo $resultado2["indsucursal"]; ?>"><?php echo $resultado2["nombre_sucursal"]; ?></option>
                             <?php } ?>
-                            <option class="form-control" value="1">Managua</option>
-                            <option class="form-control" value="2">Masaya</option>
-                            <option class="form-control" value="3">Chontales</option>
-                            <option class="form-control" value="6">Esteli</option>
-                            <option class="form-control" value="5">Leon</option>
-                            <option class="form-control" value="9">Matagalpa</option>
-                            <option class="form-control" value="4">Chinandega</option>
-                            <option class="form-control" value="7">Managua Bolonia</option>
-                            <option class="form-control" value="8">Managua Villa Fontana</option>
-                            <option class="form-control" value="10">Clinica Dansing</option>
                         </select>
                     </div>
 

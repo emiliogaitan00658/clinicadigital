@@ -22,7 +22,7 @@ WHERE (indtalonario >= '$primera' AND indtalonario <= '$segunda') and indsucursa
 <div class="container">
     <hr>
     <h2 class="center">INFORME DE MATERILES DE SUCURSAL
-        DE <?php echo strtoupper(datos_clientes::nombre_sucursal_ind($sucursal)); ?></h2>
+        DE <?php echo strtoupper(datos_clientes::nombre_sucursal_ind($sucursal, $mysqli)); ?></h2>
     <h5 class="center-align">Fecha de facturaciòn <?php echo $fecha1 ?> al <?php echo $fecha2 ?></h5>
     <hr>
 </div>

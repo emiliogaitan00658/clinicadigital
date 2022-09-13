@@ -25,7 +25,7 @@ $sucursal = $_GET['textsucursal'];
 <div class="center-align">
     <h4>Reporte de materiales Sucursal <span>
             <?php if (!empty($_SESSION)) {
-                echo datos_clientes::nombre_sucursal($idsucursal);
+                echo datos_clientes::nombre_sucursal($idsucursal, $mysqli);
             } ?>
         </span></h4>
     <p>Fecha reporte : <b><?php echo $fecha1 . " al " . $fecha2; ?></b></p>
